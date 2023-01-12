@@ -20,6 +20,10 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2772
 TARGET_SCREEN_WIDTH := 1240
 
+#Define Board 
+PRODUCT_BOARD_PLATFORM := sm7675
+PRODUCT_USES_QCOM_HARDWARE := true
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
@@ -36,6 +40,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm7675-common/common.mk)
+
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/avalon/avalon-vendor.mk)
