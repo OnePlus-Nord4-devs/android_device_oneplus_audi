@@ -7,16 +7,16 @@
 # Include the common OEM chipset BoardConfig.
 include device/oneplus/sm7675-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/oneplus/audi
+DEVICE_PATH := device/oneplus/avalon
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := OP5CFBL1
+TARGET_OTA_ASSERT_DEVICE := OP5E93L1
 
 # Display
 TARGET_SCREEN_DENSITY := 510
 
 # Kernel (prebuilt)
-PREBUILT_PATH := device/oneplus/audi-prebuilt
+PREBUILT_PATH := device/oneplus/avalon-prebuilt
 TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_KERNEL_SOURCE := $(PREBUILT_PATH)/kernel-headers
 BOARD_PREBUILT_DTBIMAGE_DIR := $(PREBUILT_PATH)/images/dtbs/
@@ -27,10 +27,10 @@ PRODUCT_COPY_FILES += \
 # Kernel modules
 DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/vendor_dlkm
 RAMDISK_MODULES_PATH := $(PREBUILT_PATH)/modules/vendor_boot
-SYSTEM_DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/system_dlkm/6.1.57-android14-11-o-g982ce5cd78f9
+SYSTEM_DLKM_MODULES_PATH := $(PREBUILT_PATH)/modules/system_dlkm/6.1.57-android14-11-o-g90e1b7200770
 
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(SYSTEM_DLKM_MODULES_PATH)/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules/6.1.57-android14-11-o-g982ce5cd78f9/)
+    $(call find-copy-subdir-files,*,$(SYSTEM_DLKM_MODULES_PATH)/,$(TARGET_COPY_OUT_SYSTEM_DLKM)/lib/modules/6.1.57-android14-11-o-g90e1b7200770/)
 
 BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DLKM_MODULES_PATH)/*.ko)
 BOARD_VENDOR_KERNEL_MODULES_LOAD := $(patsubst %,$(DLKM_MODULES_PATH)/%,$(shell cat $(DLKM_MODULES_PATH)/modules.load))
@@ -54,4 +54,4 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
 #SOONG_CONFIG_OPLUS_LINEAGE_VIBRATOR_HAL_USE_EFFECT_STREAM := true
 
 # Include the proprietary files BoardConfig.
-include vendor/oneplus/audi/BoardConfigVendor.mk
+include vendor/oneplus/avalon/BoardConfigVendor.mk

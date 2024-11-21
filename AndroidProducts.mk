@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/yaap_audi.mk
+    $(LOCAL_DIR)/yaap_avalon.mk
 
 COMMON_LUNCH_CHOICES := \
-    yaap_audi-user \
-    yaap_audi-userdebug \
-    yaap_audi-eng
+    yaap_avalon-user \
+    yaap_avalon-userdebug \
+    yaap_avalon-eng

@@ -8,21 +8,21 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from audi device
-$(call inherit-product, device/oneplus/audi/device.mk)
+# Inherit from avalon device
+$(call inherit-product, device/oneplus/avalon/device.mk)
 
 # Inherit some common YAAP stuff.
 TARGET_BUILD_GAPPS := true
 $(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
-PRODUCT_NAME := yaap_audi
-PRODUCT_DEVICE := audi
+PRODUCT_NAME := yaap_avalon
+PRODUCT_DEVICE := avalon
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := PJF110
+PRODUCT_MODEL := CPH2661
 
 PRODUCT_SYSTEM_NAME := $(PRODUCT_MODEL)
-PRODUCT_SYSTEM_DEVICE := OP5CFBL1
+PRODUCT_SYSTEM_DEVICE := OP5E93L1
 
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi

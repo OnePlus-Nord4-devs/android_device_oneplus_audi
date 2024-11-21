@@ -14,7 +14,7 @@ fi
 
 set -e
 
-export DEVICE=audi
+export DEVICE=avalon
 export DEVICE_COMMON=sm7675-common
 export VENDOR=oneplus
 
